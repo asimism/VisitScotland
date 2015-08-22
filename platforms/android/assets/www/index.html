@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Visit Scotland</title>
+    <link href="jquery-mobile/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="css/carousel-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/jquery.excoloSlider.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="jquery-mobile/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+    <script src="js/carousel.js" type="text/javascript"></script>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.excoloSlider.js"></script>
+    <script>
+        function openClosesPath() {
+            findClosestPlace(function callBack(i) {
+                window.location = "singleLocation.html?pos=" + i;
+            });
+        }
+    </script>
+</head>
+<body>
+<div data-role="page" id="page">
+    <div data-role="header" class="header">
+        <img src="img/logost.png" alt="Logo" class="logo"/>
+
+        <h1>Find a tourist attraction</h1>
+    </div>
+    <div class="menu-list-bg">
+        <div class="menu-items">
+            <ul data-role="listview">
+                <li><a href="allLocations.html" data-transition="fade" data-ajax="false">Top 10 Scottish Attractions</a>
+                </li>
+                <li><a onclick="openClosesPath()" data-transition="slide" class="link2nd" data-ajax="false">Nearest
+                    Tourist Attraction</a></li>
+                <li><a href="mapFrame.html" data-transition="fade" data-ajax="false">Map</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- the viewport -->
+    <div class="m-carousel m-fluid m-carousel-photos">
+        <!-- the slider -->
+        <div class="m-carousel-inner">
+            <!-- the items -->
+            <div class="m-item m-active">
+                <img src="img/home-slider/1.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/2.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/3.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/4.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/5.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/6.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/7.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/8.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/9.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/10.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/11.jpg" alt="Slider Image">
+            </div>
+            <div class="m-item">
+                <img src="img/home-slider/12.jpg" alt="Slider Image">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.m-carousel').carousel();
+    $(function () {
+        $("#sliderA").excoloSlider();
+    });
+</script>
+</body>
+</html>
